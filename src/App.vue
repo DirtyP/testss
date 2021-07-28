@@ -1,19 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <keep-alive>
+     <router-view/>
+    </keep-alive>
   </div>
 </template>
 
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+<script>
+
+// import {getData} from 'network/data'
+
+export default {
+  
+  name:"App",
+   created () {
+    //  if (sessionStorage.getItem("store") ) {
+    //     this.$store.replaceState(Object.assign({}, this.$store.state,JSON.parse(sessionStorage.getItem("store"))))
+    //   }
+    //   window.addEventListener("beforeunload",()=>{
+    //     sessionStorage.setItem("store",JSON.stringify(this.$store.state))
+    //   })
+    // getData()//获取数据
+    // .then(({data})=>{
+    //   for(let key in data){
+    //     this.$store.commit('addUsers',data[key])
+    //   }
+    // })
+ },
+}
+</script>
+
+<style scoped>
+
 </style>
