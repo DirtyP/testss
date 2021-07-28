@@ -5,7 +5,7 @@
       <button class="bt1" @click="login">
       登录
       </button>
-      <img :src="imageList[0][0]">
+      <img v-if="imageList[0][0]" :src="imageList[0][0]">
       <!-- <banner/> -->
     </div>
   </div>
@@ -41,9 +41,9 @@ created () {
     .then(res=>{
       console.log(this)
       console.log(res)
-      this.imageList=resyi
+      this.imageList=res
       // this.$set(this.imageList)
-      console.log(this.imageList[0][0])
+      // console.log(this.imageList[0][0])
       // this.$set(this.imageList,1,res[1])
       // console.log(this.imageList[0][0])
       // for(let i=0;i++;i<res.length){
